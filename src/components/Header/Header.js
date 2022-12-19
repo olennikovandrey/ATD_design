@@ -8,11 +8,9 @@ const Header = () => {
       <div>
         <span className="logo">ATD Design and Consultancy FZ-LLC</span>
         <div className="navs-wrapper">
-        {
-          navs.map(item =>
+        { navs.map(item =>
             <nav>{ item }</nav>
-          )
-        }
+          ) }
       </div>
       </div>
     </header>

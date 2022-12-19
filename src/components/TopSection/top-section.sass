@@ -1,0 +1,19 @@
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $maxWidth: $maxWidth - 320
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidth}))
+
+
+.top-section
+  height: 800px
+  padding: 200px 20px 0 10px
+  display: flex
+  justify-content: flex-end
+  background: url("../../assets/images/1.jpg") no-repeat 0% / 100%
+  &__slogan
+    width: 30%
+    @include adaptiv-font(40, 15)
+    color: #fff
+    text-shadow: 1px 0 3px #000
+    text-align: center
