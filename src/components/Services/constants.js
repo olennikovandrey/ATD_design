@@ -4,7 +4,7 @@ import contructersWorks from "../../assets/images/services/contructers-works.jpg
 import designers from "../../assets/images/services/designers.jpg";
 import furnitures from "../../assets/images/services/furnitures.jpg";
 
-export const swiperData = [
+export const servicesData = [
   {
     id: "1",
     value: "Consultation and assistance in the loose furniture selection",
@@ -33,8 +33,7 @@ export const swiperData = [
 ]
 export const servicesSwiperSettings = {
   slidesPerView: 3,
-  spaceBetween: 0,
-  loop: true,
+  spaceBetween: 10,
   mousewheel: true,
   navigation: true,
   effect: "cube",

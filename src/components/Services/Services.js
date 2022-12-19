@@ -1,9 +1,9 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+/* import { Swiper, SwiperSlide } from "swiper/react"; */
 import SwiperCore, { Navigation, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { swiperData, servicesSwiperSettings } from "./constants";
+import { servicesData, /* servicesSwiperSettings */ } from "./constants";
 
 SwiperCore.use([Autoplay, Navigation]);
 
@@ -12,7 +12,13 @@ const Services = () => {
     <section className="services" id="Services">
       <h2>The Company core businesses includes</h2>
       <div className="services__wrapper">
-      <Swiper { ...servicesSwiperSettings }>
+        { servicesData.map(item =>
+          <React.Fragment key={ item.id }>
+            <p>{ item.value }</p>
+          </React.Fragment>
+        ) }
+
+    {/*  <Swiper { ...servicesSwiperSettings }>
         {
           swiperData.map(service =>
             <SwiperSlide key={ service.id }>
@@ -25,7 +31,7 @@ const Services = () => {
             </SwiperSlide>
           )
         }
-      </Swiper>
+      </Swiper> */}
       </div>
     </section>
   )
