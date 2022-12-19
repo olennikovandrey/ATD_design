@@ -5,6 +5,7 @@ import "./index.sass";
 import Services from "./components/Services/Services";
 import About from "./components/About/About";
 import Contacts from "./components/Contacts/Contacts";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Services />
       <About />
       <Contacts />
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,21 @@
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $maxWidth: $maxWidth - 320
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidth}))
+
+footer
+  width: 100vw
+  height: 80px
+  box-shadow: 0 -10px 10px #00000095
+  background-color: #e7e7e7
+  & div
+    max-width: 1440px
+    height: 100%
+    margin: 0 auto
+    padding: 0 10px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    & p
+      @include adaptiv-font(20, 14)
