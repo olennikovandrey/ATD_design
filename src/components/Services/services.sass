@@ -1,0 +1,38 @@
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $maxWidth: $maxWidth - 320
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidth}))
+
+.services
+  padding: 20px 10px 30px
+  &__wrapper
+    margin: 0 auto
+    width: 80%
+    &-item
+      height: 450px
+      width: 350px
+      margin: 5px 10px
+      padding: 10px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      box-shadow: 0 0 10px #000
+      border-radius: 6px
+      border: 1px solid #000
+      &-img
+        width: 340px
+        margin-bottom: 15px
+        display: flex
+        justify-content: center
+        align-items: center
+        & img
+          width: 100%
+      & p
+        @include adaptiv-font(20, 14)
+        color: #000
+        text-shadow: 2px 0 5px #000
+        text-align: center
+        -webkit-text-stroke-width: 1px
+        -webkit-text-stroke-color: black

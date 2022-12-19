@@ -1,11 +1,21 @@
 @import url("./components/Header/header.sass")
 @import url("./components/TopSection/top-section.sass")
+@import url("./components/Services/services.sass")
+@import url("./components/Services/swiper.sass")
+@import url("./components/About/about.sass")
+@import url("./components/Contacts/contacts.sass")
 
 @font-face
   font-family: "Roboto"
   font-style: normal
   font-weight: 400
   src: url("./assets/fonts/Roboto-Regular.ttf") format('truetype')
+
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $maxWidth: $maxWidth - 320
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidth}))
 
 *
   margin: 0
@@ -25,3 +35,9 @@ html
   max-width: 1920px
   background-color: #fff
   margin: 0 auto
+
+h2
+  @include adaptiv-font(30, 14)
+  color: #000
+  text-align: center
+  margin-bottom: 20px

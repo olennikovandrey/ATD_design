@@ -1,7 +1,7 @@
 import React from "react";
 
 const Header = () => {
-  const navs = ["Main", "Services", "Contacts"];
+  const navs = ["Main", "Services", "About", "Contacts"];
 
   return (
     <header>
