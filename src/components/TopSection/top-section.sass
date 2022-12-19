@@ -7,13 +7,17 @@ $maxWidth: 1920
 
 .top-section
   height: 800px
-  padding: 200px 20px 0 10px
+  padding: 80px 40px 0 10px
   display: flex
   justify-content: flex-end
-  background: url("../../assets/images/1.jpg") no-repeat 0% / 100%
+  background: url("../../assets/images/1.jpg") no-repeat 40% / 100%
   &__slogan
+    display: block
+    margin-top: 100px
     width: 30%
     @include adaptiv-font(40, 15)
     color: #fff
-    text-shadow: 1px 0 3px #000
+    text-shadow: 2px 0 5px #000
     text-align: center
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: black
