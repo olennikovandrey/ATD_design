@@ -1,0 +1,54 @@
+header
+  width: 100vw
+  height: 80px
+  position: fixed
+  left: 0
+  box-shadow: 0 10px 10px #00000095
+  background-color: #fff
+  & div
+    max-width: 1440px
+    height: 100%
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    & .logo
+      width: 60%
+      color: #12537e
+      font-size: 2rem
+      font-weight: bold
+      cursor: pointer
+
+    & .navs-wrapper
+      width: 40%
+      display: flex
+      justify-content: flex-end
+      & nav
+        background-image: linear-gradient(to right,#12537e,#12537e 50%,#000 50%)
+        background-size: 200% 100%
+        background-position: -100%
+        display: inline-block
+        padding: 5px 0
+        position: relative
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        transition: all 0.3s ease-in-out
+        margin-right: 15px
+        cursor: pointer
+        font-size: 20px
+        &:last-child
+          margin: 0
+        &::before
+          content: ""
+          background: #12537e
+          display: block
+          position: absolute
+          bottom: -3px
+          left: 0
+          width: 0
+          height: 3px
+          transition: .2s ease-in-out
+        &:hover
+          background-position: 0
+        &:hover::before
+          width: 100%
