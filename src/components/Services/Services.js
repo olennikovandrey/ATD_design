@@ -3,14 +3,14 @@ import React from "react";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { servicesData, /* servicesSwiperSettings */ } from "./constants";
+import { servicesData, /* servicesSwiperSettings */ } from "../../constants/constants";
 
 SwiperCore.use([Autoplay, Navigation]);
 
 const Services = () => {
   return (
     <section className="services" id="Services">
-      <h2>The Company core businesses includes</h2>
+      <h2>The Company core businesses include</h2>
       <div className="services__wrapper">
         { servicesData.map(item =>
           <React.Fragment key={ item.id }>
