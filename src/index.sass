@@ -1,7 +1,6 @@
 @import url("./components/Header/header.sass")
 @import url("./components/TopSection/top-section.sass")
 @import url("./components/Services/services.sass")
-@import url("./components/Services/swiper.sass")
 @import url("./components/About/about.sass")
 @import url("./components/Contacts/contacts.sass")
 @import url("./components/Footer/footer.sass")
@@ -37,6 +36,13 @@ html
   background-color: #fff
   margin: 0 auto
 
+section
+  padding: 20px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
 h2
   @include adaptiv-font(30, 14)
   color: #000
@@ -45,7 +51,13 @@ h2
 
 .logo
   width: 60%
-  color: #12537e
+  color: #321f19
   @include adaptiv-font(30, 15)
   font-weight: bold
   cursor: pointer
+
+p
+  display: block
+  width: 30%
+  text-align: center
+  @include adaptiv-font(25, 14)

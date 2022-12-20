@@ -11,28 +11,11 @@ const Services = () => {
   return (
     <section className="services" id="Services">
       <h2>The Company core businesses include</h2>
-      <div className="services__wrapper">
-        { servicesData.map(item =>
-          <React.Fragment key={ item.id }>
-            <p>{ item.value }</p>
-          </React.Fragment>
-        ) }
-
-    {/*  <Swiper { ...servicesSwiperSettings }>
-        {
-          swiperData.map(service =>
-            <SwiperSlide key={ service.id }>
-              <div className="services__wrapper-item">
-                <div className="services__wrapper-item-img">
-                  <img src={ service.image } alt={ service.value }/>
-                </div>
-                <p>{ service.value }</p>
-              </div>
-            </SwiperSlide>
-          )
-        }
-      </Swiper> */}
-      </div>
+      { servicesData.map(item =>
+        <React.Fragment key={ item.id }>
+          <p>{ item.value }</p>
+        </React.Fragment>
+      ) }
     </section>
   )
 }

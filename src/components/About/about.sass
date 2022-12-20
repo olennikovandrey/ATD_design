@@ -1,18 +1,2 @@
-$maxWidth: 1920
-@mixin adaptiv-font($pcSize, $mobSize)
-  $addSize: $pcSize - $mobSize
-  $maxWidth: $maxWidth - 320
-  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidth}))
-
 .about
-  padding: 20px
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  background-color: #e7e7e7
-  & span
-    display: block
-    width: 30%
-    text-align: center
-    @include adaptiv-font(20, 14)
+  background-color: rgb(207, 184, 170, .5)
