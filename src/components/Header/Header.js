@@ -5,7 +5,6 @@ const Header = () => {
 
   return (
     <header>
-      <div>
         <span className="logo">ATD Design and Consultancy FZ-LLC</span>
         <div className="navs-wrapper">
         { navs.map(item =>
@@ -15,7 +14,6 @@ const Header = () => {
             }
             >{ item }</nav>
           ) }
-      </div>
       </div>
     </header>
   );

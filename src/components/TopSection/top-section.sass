@@ -6,11 +6,22 @@ $maxWidth: 1920
 
 .top-section
   height: 75vh
-  padding: 80px 40px 0 50px
+  padding: 80px 0 0 50px
   display: flex
   justify-content: center
   align-items: flex-start
   background: url("../../assets/images/top-section/1.jpg") no-repeat left 25% / 100%
+  @media only screen and (max-width: 912px)
+    height: 50vh
+    padding: 60px 0 0 50px
+  @media only screen and (max-width: 768px)
+    height: 50vh
+    padding: 40px 0 0 50px
+  @media only screen and (max-width: 425px)
+    height: 30vh
+    padding: 40px 0 0 20px
+  @media only screen and (max-width: 320px)
+    padding: 40px 0 0 5px
   & span.top-section__slogan
     display: block
     width: 35%
@@ -19,3 +30,10 @@ $maxWidth: 1920
     font-weight: bold
     text-shadow: 5px 0 30px #000
     text-align: center
+    @media only screen and (max-width: 768px)
+      width: 50%
+    @media only screen and (max-width: 375px)
+      width: 60%
+      text-shadow: 0 0 50px #000
+    @media only screen and (max-width: 320px)
+      width: 70%

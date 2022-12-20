@@ -5,52 +5,53 @@ $maxWidth: 1920
   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidth}))
 
 header
-  width: 100vw
-  height: 80px
   position: fixed
+  height: 80px
+  padding: 0 10%
   left: 0
   box-shadow: 0 10px 10px #00000095
   background-color: #fff
   z-index: 2
-  & div
-    max-width: 1440px
-    height: 100%
-    margin: 0 auto
-    padding: 0 10px
+  @media only screen and (max-width: 1024px)
+    height: 60px
+  @media only screen and (max-width: 768px)
+    height: 40px
+    padding: 0 5%
+    box-shadow: 0 5px 10px #00000095
+  & .navs-wrapper
+    width: 40%
     display: flex
-    align-items: center
-    justify-content: space-between
-
-    & .navs-wrapper
-      width: 40%
-      display: flex
-      justify-content: flex-end
-      & nav
-        background-image: linear-gradient(to right,#321f19,#321f19 50%,#000 50%)
-        background-size: 200% 100%
-        background-position: -100%
-        display: inline-block
-        padding: 5px 0
-        position: relative
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-        transition: all 0.3s ease-in-out
-        margin-right: 15px
-        cursor: pointer
-        @include adaptiv-font(20, 10)
-        &:last-child
-          margin: 0
-        &::before
-          content: ""
-          background: #321f19
-          display: block
-          position: absolute
-          bottom: -3px
-          left: 0
-          width: 0
-          height: 3px
-          transition: .2s ease-in-out
-        &:hover
-          background-position: 0
-        &:hover::before
-          width: 100%
+    justify-content: flex-end
+    @media only screen and (max-width: 375px)
+      display: none
+    & nav
+      position: relative
+      margin-right: 15px
+      padding: 5px 0
+      display: inline-block
+      background-image: linear-gradient(to right,#321f19,#321f19 50%,#000 50%)
+      background-size: 200% 100%
+      background-position: -100%
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      transition: .2s ease-in-out
+      cursor: pointer
+      @include adaptiv-font(20, 10)
+      @media only screen and (max-width: 375px)
+        margin-right: 5px
+      &:last-child
+        margin: 0
+      &::before
+        content: ""
+        background: #321f19
+        display: block
+        position: absolute
+        bottom: -3px
+        left: 0
+        width: 0
+        height: 3px
+        transition: .2s ease-in-out
+      &:hover
+        background-position: 0
+      &:hover::before
+        width: 100%
