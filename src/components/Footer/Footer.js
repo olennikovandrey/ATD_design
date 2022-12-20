@@ -5,10 +5,10 @@ const Footer = () => {
     <footer>
       <div>
         <span className="logo">ATD Design and Consultancy FZ-LLC</span>
-        <p>All right reserved, 2022 (c)</p>
+        <p>All right reserved, 2022 &copy;</p>
       </div>
     </footer>
   )
-}
+};
 
-export default Footer
+export default Footer;

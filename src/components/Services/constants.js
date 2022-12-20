@@ -27,7 +27,7 @@ export const servicesData = [
   },
   {
     id: "5",
-    value: "Consultation and assistance in interiors set-up (tableware, bed linen, accessories, interior item",
+    value: "Consultation and assistance in interiors set-up (tableware, bed linen, accessories, interior item)",
     image: furnitures
   },
 ]
